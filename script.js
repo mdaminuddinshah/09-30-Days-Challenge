@@ -11,7 +11,7 @@ btns.addEventListener('click', function(){
     let createDiv = document.createElement('div');
     createDiv.style.display = 'flex';
 
-    // ni utk button create para dan delete button
+    // ni utk button ( create para dan delete button )
     let createParagraph = document.createElement('button');
     let deleteParagraph = document.createElement('button');
 
@@ -20,7 +20,6 @@ btns.addEventListener('click', function(){
 
     createParagraph.style.backgroundColor = 'rgba(0, 120, 255, 1)';
     deleteParagraph.style.backgroundColor = 'rgba(255, 0, 45)';
-
 
     createParagraph.style.width = '200px';
     deleteParagraph.style.width = '100px';
@@ -47,6 +46,10 @@ btns.addEventListener('click', function(){
     createDiv.appendChild(deleteParagraph);
     listsContainer.appendChild(createDiv);
     
+    deleteParagraph.addEventListener('click', function(){
+        createDiv.removeChild(createParagraph)
+        createDiv.removeChild(deleteParagraph)
+    })
 })
 
 cls.addEventListener('click', function(){
