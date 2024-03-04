@@ -63,6 +63,12 @@ btns.addEventListener('click', function(){
         createDiv.removeChild(deleteParagraph)
         createDiv.removeChild(editParagraph)
     })
+
+    editParagraph.addEventListener('click', function(){
+        if(createParagraph == '' || createParagraph !== ''){
+            createParagraph.textContent = inputlist.value
+        }
+    })
 })
 
 cls.addEventListener('click', function(){
